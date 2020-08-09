@@ -10,6 +10,7 @@
   import Validator from 'async-validator'
 
   export default {
+    componentName: 'KFormItem', // kInput组件使用dispatch方法时需要
     name: 'KFormItem',
     inject: ['form'],
     components: {},
@@ -29,7 +30,10 @@
 
     },
     mounted() {
-      this.$root.$on('validate', () => {
+      // this.$root.$on('validate', () => {
+      //   this.validate()
+      // })
+      this.$on('validate', () => {
         this.validate()
       })
     },
