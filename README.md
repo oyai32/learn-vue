@@ -18,3 +18,8 @@ npm run build
 # build for production and view the bundle analyzer report
 npm run build --report
 ```
+
+## 实现功能
+> 组件间通信
+###### props,⾃定义事件,事件总线(bus),$parent/$root,$children,$attrs/$listeners,refs,provide/inject 
+
