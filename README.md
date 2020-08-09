@@ -25,3 +25,6 @@ npm run build --report
 
 > 插槽
 ###### 匿名插槽,具名插槽，作用域插槽
+
+> 表单校验
+###### 仿element-ui的from表单

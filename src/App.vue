@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <FormIndex class="box"></FormIndex>
     <SoltIndex class="box"></SoltIndex>
     <Father class="box"/>
   </div>
@@ -8,12 +9,14 @@
 <script>
   import Father from './views/communication/Father'
   import SoltIndex from './views/slot/SlotIndex.vue'
+  import FormIndex from './views/form/index.vue'
 
   export default {
     name: 'App',
     components: {
       Father,
-      SoltIndex
+      SoltIndex,
+      FormIndex
     }
   }
 </script>
