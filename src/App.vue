@@ -1,16 +1,19 @@
 <template>
   <div id="app">
+    <SoltIndex class="box"></SoltIndex>
     <Father class="box"/>
   </div>
 </template>
 
 <script>
   import Father from './views/communication/Father'
+  import SoltIndex from './views/slot/SlotIndex.vue'
 
   export default {
     name: 'App',
     components: {
-      Father
+      Father,
+      SoltIndex
     }
   }
 </script>
