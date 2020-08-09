@@ -8,10 +8,12 @@
 
 <script>
   import Validator from 'async-validator'
+  import emitter from '@/mixins/emitter.js'
 
   export default {
     componentName: 'KFormItem', // kInput组件使用dispatch方法时需要
     name: 'KFormItem',
+    mixins: [emitter],
     inject: ['form'],
     components: {},
     props: {
@@ -36,6 +38,11 @@
       this.$on('validate', () => {
         this.validate()
       })
+
+      if (this.prop && this.form.rules[this.prop]) {
+        // 派发事件，告诉KForm，新增了一个formItem
+        this.dispatch('KForm', 'form.addField', [this])
+      }
     },
     methods: {
       validate() {
